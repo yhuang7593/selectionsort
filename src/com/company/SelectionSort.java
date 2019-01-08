@@ -6,7 +6,7 @@ public class SelectionSort {
         arr[j] = arr[i];
         arr[j] = t;
     }
-    public static void CompareValues(int[] arr) {
+    public static void selectionSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
                 if (arr[i] < arr[j + 1]) {
