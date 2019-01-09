@@ -1,18 +1,18 @@
 package com.company;
 
 public class SelectionSort {
-    public static void Swap(int[] arr, int i, int j) {
-        int t = arr[i];
-        arr[j] = arr[i];
-        arr[j] = t;
-    }
     public static void selectionSort(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length - 1; j++) {
-                if (arr[i] < arr[j + 1]) {
-
-
+        for (int i=0;i<arr.length; i++){
+            int minIndex=i;
+            for (int j=i+1;j<arr.length;j++){
+                if (arr[j]<arr[minIndex]){
+                    j=minIndex;
                 }
+            }
+            if(minIndex!=i){
+                int temp=arr[i];
+                arr[i]=arr[minIndex];
+                arr[minIndex]=temp;
             }
         }
     }
